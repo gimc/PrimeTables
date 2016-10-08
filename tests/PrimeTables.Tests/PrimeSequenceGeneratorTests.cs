@@ -41,5 +41,20 @@ namespace PrimeTables.Tests
 
             Assert.AreEqual(expected, generated.ToArray());
         }
+
+        [Test]
+        [Ignore("Long-running, need a better optimised algorithm")]
+        public void GenerateSequence_MillionthPrime()
+        {
+            const int millionthPrime = 179424673;
+            var generator = new PrimeSequenceGenerator();
+            var prime = 0;
+            for (var i = 0; i < 1000000; i++)
+            {
+                prime = generator.Next();
+            }
+
+            Assert.AreEqual(millionthPrime, prime);
+        }
     }
 }

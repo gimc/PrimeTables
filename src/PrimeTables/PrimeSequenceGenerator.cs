@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace PrimeTables
@@ -16,7 +17,6 @@ namespace PrimeTables
             _current = 1;
         }
 
-
         public int Next()
         {
             FindNextPrime();
@@ -26,7 +26,6 @@ namespace PrimeTables
         private void FindNextPrime()
         {
             var candidate = _current + 1;
-
             while (true)
             {
                 // If candidate is even, can't be prime except 2 which is a special even case
