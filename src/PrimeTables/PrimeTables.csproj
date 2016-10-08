@@ -39,8 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IPrimeTableGenerator.cs" />
     <Compile Include="PrimeSequenceGenerator.cs" />
     <Compile Include="IPrimeSequenceGenerator.cs" />
+    <Compile Include="PrimeTableGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
