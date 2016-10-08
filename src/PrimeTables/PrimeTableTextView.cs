@@ -1,3 +1,6 @@
+using System;
+using System.Linq;
+
 namespace PrimeTables
 {
     public class PrimeTableTextView : IPrimeTableView<string>
@@ -11,11 +14,23 @@ namespace PrimeTables
 
         public string Generate(int numPrimes)
         {
-            return @"
-|   |  2|  3|  5|
-|  2|  4|  6| 10|
-|  3|  6|  9| 15|
-|  5| 10| 15| 25|";
+            var tableValues = _tableGenerator.Generate(numPrimes);
+            var primeValues = _tableGenerator.PrimeList;
+            const int columnWidth = 3;
+
+            var output = Environment.NewLine + "|   |" + string.Join("|", primeValues.Select(v => v.ToString().PadLeft(columnWidth))) + "|";
+
+            for (var rowIndex = 0; rowIndex < primeValues.Length; rowIndex++)
+            {
+                output += Environment.NewLine;
+                output += "|" + primeValues[rowIndex].ToString().PadLeft(columnWidth) + "|";
+                for (var colIndex = 0; colIndex < primeValues.Length; colIndex++)
+                {
+                    output += tableValues[rowIndex, colIndex].ToString().PadLeft(columnWidth) + "|";
+                }
+            }
+
+            return output;
         }
     }
 }

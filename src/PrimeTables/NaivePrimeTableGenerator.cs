@@ -5,6 +5,7 @@
     /// </summary>
     public class NaivePrimeTableGenerator : IPrimeTableGenerator
     {
+        public int[] PrimeList { get; private set; }
         private readonly IPrimeSequenceGenerator _primeSequenceGenerator;
 
         public NaivePrimeTableGenerator(IPrimeSequenceGenerator primeSequenceGenerator)
@@ -15,28 +16,27 @@
         public int[,] Generate(int numPrimes)
         {
             var table = new int[numPrimes, numPrimes];
-            var primeList = GeneratePrimeList(numPrimes);
+            GeneratePrimeList(numPrimes);
 
             for (var row = 0; row < numPrimes; row++)
             {
                 for (var col = 0; col < numPrimes; col++)
                 {
-                    table[row, col] = primeList[row]*primeList[col];
+                    table[row, col] = PrimeList[row] * PrimeList[col];
                 }
             }
 
             return table;
         }
 
-        private int[] GeneratePrimeList(int numPrimes)
+        private void GeneratePrimeList(int numPrimes)
         {
-            var primeList = new int[numPrimes];
+            PrimeList = new int[numPrimes];
             for (var i = 0; i < numPrimes; i++)
             {
-                primeList[i] = _primeSequenceGenerator.Next();
+                PrimeList[i] = _primeSequenceGenerator.Next();
             }
-
-            return primeList;
         }
+
     }
 }
