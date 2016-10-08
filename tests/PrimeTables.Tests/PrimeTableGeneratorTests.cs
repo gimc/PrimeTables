@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 
 namespace PrimeTables.Tests
 {
@@ -36,6 +37,20 @@ namespace PrimeTables.Tests
             var table = generator.Generate(5);
 
             Assert.AreEqual(expected, table);
+        }
+
+        [Test]
+        public void GenerateZeroCardinalityTable()
+        {
+            var generator = new NaivePrimeTableGenerator(new PrimeSequenceGenerator());
+            Assert.Throws<ArgumentException>(() => generator.Generate(0));
+        }
+
+        [Test]
+        public void GenerateNegativeCardinalityTable()
+        {
+            var generator = new NaivePrimeTableGenerator(new PrimeSequenceGenerator());
+            Assert.Throws<ArgumentException>(() => generator.Generate(-1));
         }
     }
 }

@@ -3,14 +3,6 @@ using System.Diagnostics.Contracts;
 
 namespace PrimeTables
 {
-    [ContractClass(typeof(PrimeTableGeneratorContract))]
-    public interface IPrimeTableGenerator
-    {
-        int[] PrimeList { get; }
-
-        int[,] Generate(int numPrimes);
-    }
-
     [ContractClassFor(typeof(IPrimeTableGenerator))]
     sealed class PrimeTableGeneratorContract : IPrimeTableGenerator
     {
