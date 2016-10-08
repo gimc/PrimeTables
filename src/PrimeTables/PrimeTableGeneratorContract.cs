@@ -7,10 +7,10 @@ namespace PrimeTables
     sealed class PrimeTableGeneratorContract : IPrimeTableGenerator
     {
         public int[] PrimeList { get; set; }
-        
+
         public int[,] Generate(int numPrimes)
         {
-            Contract.Requires<ArgumentException>(numPrimes > 0);
+            Contract.Requires<ArgumentOutOfRangeException>(numPrimes > 0);
             return null;
         }
     }

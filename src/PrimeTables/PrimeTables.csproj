@@ -131,6 +131,7 @@
     <Compile Include="PrimeSequenceGenerator.cs" />
     <Compile Include="IPrimeSequenceGenerator.cs" />
     <Compile Include="NaivePrimeTableGenerator.cs" />
+    <Compile Include="PrimeTableGeneratorContract.cs" />
     <Compile Include="PrimeTableTextView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

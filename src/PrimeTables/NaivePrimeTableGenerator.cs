@@ -1,4 +1,6 @@
-﻿namespace PrimeTables
+﻿using System;
+
+namespace PrimeTables
 {
     /// <summary>
     /// Uses a naive implementation whereby the result is recalculated for every entry in the table.
