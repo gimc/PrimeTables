@@ -9,7 +9,7 @@ namespace PrimeTables
     /// </summary>
     public class PrimeSequenceGenerator : IPrimeSequenceGenerator
     {
-        private List<int> _primes = new List<int>();
+        private readonly List<long> _primes = new List<long>();
         private int _current;
 
         public PrimeSequenceGenerator()
