@@ -4,7 +4,7 @@ using System.Linq;
 namespace PrimeTables.Sequences
 {
     /// <summary>
-    /// Generates a sequence of primes, starting at 2
+    /// Generates a sequence of primes, starting at 2. Maintains a list of primes encountered so far and tests new candidates for primality by dividing against all previously discovered primes.
     /// </summary>
     public class PrimeSequenceGenerator : IPrimeSequenceGenerator
     {
