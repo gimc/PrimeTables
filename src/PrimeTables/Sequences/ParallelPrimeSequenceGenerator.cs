@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PrimeTables
+namespace PrimeTables.Sequences
 {
     /// <summary>
     /// Spawns a number of tasks (defined by numTasks) in parallel which each interrogate their own non-overlapping subsets of primes to determine primality of a candidate value.

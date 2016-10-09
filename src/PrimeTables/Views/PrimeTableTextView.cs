@@ -1,8 +1,9 @@
 using System;
 using System.Diagnostics.Contracts;
 using System.Linq;
+using PrimeTables.Tables;
 
-namespace PrimeTables
+namespace PrimeTables.Views
 {
     public class PrimeTableTextView : IPrimeTableView<string>
     {

@@ -1,6 +1,6 @@
-﻿using System;
+﻿using PrimeTables.Sequences;
 
-namespace PrimeTables
+namespace PrimeTables.Tables
 {
     /// <summary>
     /// Uses a naive implementation whereby the result is recalculated for every entry in the table.

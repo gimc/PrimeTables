@@ -1,4 +1,4 @@
-﻿namespace PrimeTables
+﻿namespace PrimeTables.Sequences
 {
     public interface IPrimeSequenceGenerator
     {

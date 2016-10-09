@@ -1,5 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
+using PrimeTables.Sequences;
+using PrimeTables.Tables;
 
 namespace PrimeTables.Tests
 {

@@ -2,6 +2,9 @@
 using CommandLine;
 using CommandLine.Text;
 using PrimeTables;
+using PrimeTables.Sequences;
+using PrimeTables.Tables;
+using PrimeTables.Views;
 
 namespace PrimeTableViewer
 {

@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace PrimeTables
+namespace PrimeTables.Sequences
 {
     /// <summary>
     /// Generates a sequence of primes, starting at 2

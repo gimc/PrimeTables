@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics.Contracts;
 
-namespace PrimeTables
+namespace PrimeTables.Tables
 {
     [ContractClassFor(typeof(IPrimeTableGenerator))]
     sealed class PrimeTableGeneratorContract : IPrimeTableGenerator

@@ -126,15 +126,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IPrimeTableGenerator.cs" />
-    <Compile Include="IPrimeTableTextView.cs" />
-    <Compile Include="ParallelPrimeSequenceGenerator.cs" />
-    <Compile Include="PrimeSequenceGenerator.cs" />
-    <Compile Include="IPrimeSequenceGenerator.cs" />
-    <Compile Include="NaivePrimeTableGenerator.cs" />
-    <Compile Include="PrimeTableGeneratorContract.cs" />
-    <Compile Include="PrimeTableTextView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sequences\IPrimeSequenceGenerator.cs" />
+    <Compile Include="Sequences\ParallelPrimeSequenceGenerator.cs" />
+    <Compile Include="Sequences\PrimeSequenceGenerator.cs" />
+    <Compile Include="Tables\IPrimeTableGenerator.cs" />
+    <Compile Include="Tables\NaivePrimeTableGenerator.cs" />
+    <Compile Include="Tables\PrimeTableGeneratorContract.cs" />
+    <Compile Include="Views\IPrimeTableTextView.cs" />
+    <Compile Include="Views\PrimeTableTextView.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

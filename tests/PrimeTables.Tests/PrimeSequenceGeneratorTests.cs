@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using NUnit.Framework;
+using PrimeTables.Sequences;
 
 namespace PrimeTables.Tests
 {

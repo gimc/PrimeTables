@@ -1,4 +1,4 @@
-namespace PrimeTables
+namespace PrimeTables.Views
 {
     public interface IPrimeTableView<out T>
     {
