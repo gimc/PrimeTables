@@ -1,9 +1,9 @@
 # PrimeTables
 
 ### How to run
-A command-line application called **PrimeTableViewer** is provided. The application takes one parameter (-n), which is the number of primes to be displayed in the table.
+A build of the command-line application  **PrimeTableViewer** is provided in `/bin`. To run: clone the repository, open a command prompt in the `/bin` directory and type `PrimeTableViewer`. The application takes one parameter (-n), which is the number of primes to be displayed in the table.
 
-For example, to view a prime table with three entries, open a command prompt in the directory containing the executable and run:
+For example, to view a prime table with three entries:
 
     PrimeTableViewer -n 3
 
@@ -11,6 +11,8 @@ The application defaults to 2 values if the flag is not specified.
 
 ### Compilation
 If you wish to compile the PrimeTables library, you must have Microsoft's Code Contracts for .NET installed. This is available from the  [Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/1ec7db13-3363-46c9-851f-1ce455f66970).
+
+(If you don't, the code will compile but subsequently fail at runtime when it reaches a contract declaration.)
 
 ### What I'm pleased with
 Clean design separated adhering (mostly) to SRP:
