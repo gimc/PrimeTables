@@ -28,12 +28,6 @@ namespace PrimeTables
             var candidate = _current + 1;
             while (true)
             {
-                // If candidate is even, can't be prime except 2 which is a special even case
-                if (candidate%2 == 0 && candidate != 2)
-                {
-                    candidate += 1;
-                }
-
                 if (_primes.Any(prime => candidate%prime == 0))
                 {
                     candidate++;
