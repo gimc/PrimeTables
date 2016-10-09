@@ -53,7 +53,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\PrimeTables\PrimeTables.csproj">
+    <ProjectReference Include="..\PrimeTables\PrimeTables.csproj">
       <Project>{07E4593B-0E7B-483E-9BB7-03D307F93ADF}</Project>
       <Name>PrimeTables</Name>
     </ProjectReference>

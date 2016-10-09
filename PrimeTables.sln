@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeTables", "src\PrimeTab
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeTables.Tests", "tests\PrimeTables.Tests\PrimeTables.Tests.csproj", "{4FCE1D3F-6B9C-4D7A-A1AF-2EBA872932B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeTableViewer", "PrimeTableViewer\PrimeTableViewer.csproj", "{4E903C7E-5D2B-4C9C-8755-736A4F81C61C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeTableViewer", "src\PrimeTableViewer\PrimeTableViewer.csproj", "{4E903C7E-5D2B-4C9C-8755-736A4F81C61C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

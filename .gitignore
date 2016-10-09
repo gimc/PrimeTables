@@ -4,3 +4,5 @@ packages/
 src/PrimeTables/bin/
 PrimeTableViewer/obj/
 PrimeTableViewer/bin/
+src/PrimeTableViewer/obj/
+src/PrimeTableViewer/bin/
