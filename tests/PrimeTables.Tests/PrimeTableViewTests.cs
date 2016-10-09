@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 using PrimeTables.Sequences;
 using PrimeTables.Tables;
 using PrimeTables.Views;
@@ -22,6 +23,16 @@ namespace PrimeTables.Tests
             var output = view.Generate(3);
 
             Assert.AreEqual(expected, output);
+        }
+
+        [Test]
+        public void TextViewGenerateWithInvalidNumberOfPrimes()
+        {
+            var sequenceGenerator = new PrimeSequenceGenerator();
+            var tableGenerator = new NaivePrimeTableGenerator(sequenceGenerator);
+            var view = new PrimeTableTextView(tableGenerator);
+            
+            Assert.Throws<ArgumentOutOfRangeException>(() => view.Generate(0));
         }
     }
 }
