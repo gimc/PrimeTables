@@ -39,6 +39,5 @@ namespace PrimeTables.Tables
                 PrimeList[i] = _primeSequenceGenerator.Next();
             }
         }
-
     }
 }

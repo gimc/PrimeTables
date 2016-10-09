@@ -4,7 +4,7 @@ using System.Diagnostics.Contracts;
 namespace PrimeTables.Tables
 {
     [ContractClassFor(typeof(IPrimeTableGenerator))]
-    sealed class PrimeTableGeneratorContract : IPrimeTableGenerator
+    abstract class PrimeTableGeneratorContract : IPrimeTableGenerator
     {
         public int[] PrimeList { get; set; }
 

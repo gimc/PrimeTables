@@ -1,5 +1,4 @@
 using System;
-using System.Diagnostics.Contracts;
 using System.Linq;
 using PrimeTables.Tables;
 
@@ -22,8 +21,6 @@ namespace PrimeTables.Views
         /// <exception cref="ArgumentOutOfRangeException">Number of primes must be greater than zero</exception>
         public string Generate(int numPrimes)
         {
-            Contract.Requires<ArgumentOutOfRangeException>(numPrimes > 0);
-
             var tableValues = _tableGenerator.Generate(numPrimes);
             var primeValues = _tableGenerator.PrimeList;
             const int columnWidth = 3;

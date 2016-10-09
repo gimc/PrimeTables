@@ -135,6 +135,7 @@
     <Compile Include="Tables\PrimeTableGeneratorContract.cs" />
     <Compile Include="Views\IPrimeTableTextView.cs" />
     <Compile Include="Views\PrimeTableTextView.cs" />
+    <Compile Include="Views\PrimeTableViewContract.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
