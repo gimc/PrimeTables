@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using Common.Logging;
+using Common.Logging.Simple;
 using NUnit.Framework;
 using PrimeTables.Sequences;
 
@@ -83,6 +85,8 @@ namespace PrimeTables.Tests
         [Ignore("Long running - maybe a million primes is a bit on the optimistic side")]
         public void GenerateSequenceParallel_MillionthPrime()
         {
+            LogManager.Adapter = new ConsoleOutLoggerFactoryAdapter();
+
             const int millionthPrime = 179424673;
             var generator = new ParallelPrimeSequenceGenerator(2);
             var prime = 0;

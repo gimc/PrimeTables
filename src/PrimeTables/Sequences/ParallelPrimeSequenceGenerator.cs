@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Common.Logging;
 
 namespace PrimeTables.Sequences
 {
@@ -13,6 +15,8 @@ namespace PrimeTables.Sequences
         private readonly List<long>[] _primeLists;
         private int _currentValue;
         private int _currentPrimeList;
+
+        private ILog _log = LogManager.GetLogger<ParallelPrimeSequenceGenerator>();
 
         public ParallelPrimeSequenceGenerator(int numTasks)
         {
@@ -36,6 +40,9 @@ namespace PrimeTables.Sequences
 
         private bool IsPrime(int candidate)
         {
+            var sw = new Stopwatch();
+            sw.Start();
+
             var tasks = new Task<bool>[_numTasks];
             for (var i = 0; i < _numTasks; i++)
             {
@@ -43,7 +50,12 @@ namespace PrimeTables.Sequences
                 tasks[i] = Task.Run(() => _primeLists[closureIndex].All(prime => candidate % prime != 0));
             }
 
+            _log.Debug("Time to setup/start tasks: " + sw.Elapsed);
+            sw.Restart();
+
             Task.WaitAll(tasks);
+
+            _log.Debug("Time for all tasks to finish: " + sw.Elapsed);
 
             return tasks.All(task => task.Result);            
         }
