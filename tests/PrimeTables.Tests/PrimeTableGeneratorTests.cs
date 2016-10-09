@@ -43,14 +43,14 @@ namespace PrimeTables.Tests
         public void GenerateZeroCardinalityTable()
         {
             var generator = new NaivePrimeTableGenerator(new PrimeSequenceGenerator());
-            Assert.Throws<ArgumentException>(() => generator.Generate(0));
+            Assert.Throws<ArgumentOutOfRangeException>(() => generator.Generate(0));
         }
 
         [Test]
         public void GenerateNegativeCardinalityTable()
         {
             var generator = new NaivePrimeTableGenerator(new PrimeSequenceGenerator());
-            Assert.Throws<ArgumentException>(() => generator.Generate(-1));
+            Assert.Throws<ArgumentOutOfRangeException>(() => generator.Generate(-1));
         }
     }
 }
